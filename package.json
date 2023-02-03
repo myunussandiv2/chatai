@@ -1,0 +1,24 @@
+{
+  "name": "selfbot",
+  "version": "1.0.0",
+  "description": "Ini bot dgn berbagai fitur",
+  "main": "index.js",
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.4.0",
+    "@hapi/boom": "^10.0.0",
+    "data-uri-to-buffer": "^4.0.0",
+    "fetch-blob": "^3.1.5",
+    "formdata-polyfill": "^4.0.10",
+    "git": "^0.1.5",
+    "node-domexception": "^1.0.0",
+    "node-fetch": "^3.2.6",
+    "pino": "^8.8.0",
+    "qrcode-terminal": "^0.12.0",
+    "web-streams-polyfill": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MYS-Bot",
+  "license": "ISC"
+}
