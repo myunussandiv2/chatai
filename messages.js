@@ -5,6 +5,7 @@ async function messages(sock) {
     console.log(JSON.stringify(msg, type, 2))
     const m = msg.messages[0]
     const sender = m.key.remoteJid
+    const fromMe = m.key.fromMe
     const text = m.message?.conversation.toLowerCase()
     const key = {
       remoteJid: sender,
