@@ -11,6 +11,7 @@ async function messages(sock) {
       id: m.key.id,
       participant: m.key?.participant
     }
+    if(sender === 'status@broadcast' || fromMe) return;
     if (text) {
       sock.readMessages([key])
       chatAIHandler(text, sender, sock)
