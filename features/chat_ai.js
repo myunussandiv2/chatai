@@ -2,6 +2,8 @@ const axios = require('axios')
 const { OPENAI_API_KEY } = require('../config')
 
 const chatAIHandler = async (text, sender, sock) => {
+  text = text.split('.ask')[1]
+  
   const response = await chatAIRequest(text)
   sock.sendMessage(sender, {text: response.text.trim()})
 }
