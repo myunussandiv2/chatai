@@ -13,9 +13,16 @@ async function messages(sock) {
       participant: m.key?.participant
     }
     if(sender === 'status@broadcast' || fromMe) return;
-    if (text) {
-      sock.readMessages([key])
-      chatAIHandler(text, sender, sock)
+      if (text && typeof text === 'string') {
+        if (text.indexOf('.ask')) {
+        sock.readMessages([key])
+        sock.sendMessage(sender, { text: 'Ketik .ask _pertanyaan anda_' })
+      } else if (text === '.ask') {
+        sock.sendMessage(sender, { text: 'Masukkan pertanyaan anda\n\nKetik .ask _pertanyaan anda_' })
+      } else if (!text.indexOf('.ask')){
+        sock.readMessages([key])
+        chatAIHandler(text, sender, sock)
+      }
     }
   })
 }
