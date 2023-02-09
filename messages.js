@@ -14,11 +14,8 @@ async function messages(sock) {
     }
     if(sender === 'status@broadcast' || fromMe) return;
       if (text && typeof text === 'string') {
-        if (text.indexOf('.ask')) {
-        sock.readMessages([key])
-        sock.sendMessage(sender, { text: 'Ketik .ask _pertanyaan anda_\nContoh: .ask apa itu sekolah?' })
-      } else if (text === '.ask') {
-        sock.sendMessage(sender, { text: 'Masukkan pertanyaan anda\n\nKetik .ask _pertanyaan anda_\nContoh: .ask apa itu sekolah?' })
+        if (text === '.ask') {
+        sock.sendMessage(sender, { text: 'Masukkan pertanyaan anda\n\nKetik .ask _pertanyaan anda_\nContoh: .ask Siapa penemu Tesla?' })
       } else if (!text.indexOf('.ask')){
         sock.readMessages([key])
         chatAIHandler(text, sender, sock)
