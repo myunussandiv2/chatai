@@ -39,7 +39,7 @@ _••>Chat Bot akan menjawab *pong*_
 
 *.ai [pertanyaan]*
 _••>Chat Bot akan menjawab pertanyaanmu_
-contoh: .ask siapa pencipta Mobil Tesla?
+contoh: .ai siapa pencipta Mobil Tesla?
 
 Gunakan prefix: ['.', '#', '!', '']`
             })
