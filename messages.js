@@ -37,7 +37,7 @@ async function messages(sock) {
 *ping*
 _••>Chat Bot akan menjawab *pong*_
 
-*.ask [pertanyaan]*
+*.ai [pertanyaan]*
 _••>Chat Bot akan menjawab pertanyaanmu_
 contoh: .ask siapa pencipta Mobil Tesla?
 
