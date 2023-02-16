@@ -5,7 +5,7 @@ const chatAIHandler = async (m, text, sender, sock) => {
   text = text.slice(1).join(' ')
   const contextInfo = m.message?.extendedTextMessage?.contextInfo
   if (contextInfo) {
-    text = `${contextInfo?.quotedMessage.conversation}\n${text}`
+    text = `anda: ${contextInfo?.quotedMessage.conversation}\n\n$saya: {text}\n\nanda: ?`
   }
   
   const response = await chatAIRequest(text)
